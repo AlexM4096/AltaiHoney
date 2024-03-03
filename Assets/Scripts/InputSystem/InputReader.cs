@@ -9,7 +9,9 @@ namespace InputSystem
     {
         private GameInput _gameInput;
 
-        public event Action MouseClickEvent = delegate { };
+        public event Action MouseDownEvent = delegate { };
+        public event Action MouseUpEvent = delegate { };
+        
         public event Action<Vector2> MousePositionEvent = delegate { };
 
         private void OnEnable()
@@ -20,12 +22,25 @@ namespace InputSystem
                 
                 _gameInput.Gameplay.SetCallbacks(this);
             }
+            
+            _gameInput.Enable();
         }
 
-        public void OnMouseClick(InputAction.CallbackContext context) 
-            => MouseClickEvent.Invoke();
+        private void OnDisable()
+        {
+            _gameInput.Disable();
+        }
+
+
+        public void OnMouseClick(InputAction.CallbackContext context)
+        {
+            if (context.performed) MouseDownEvent.Invoke();
+            else if (context.canceled) MouseUpEvent.Invoke();
+        }
 
         public void OnMousePosition(InputAction.CallbackContext context)
-            => MousePositionEvent.Invoke(context.ReadValue<Vector2>());
+        {
+            MousePositionEvent.Invoke(context.ReadValue<Vector2>());
+        }
     }
 }
