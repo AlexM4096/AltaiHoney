@@ -2,7 +2,7 @@
 
 public class PersistentSingleton<T> : MonoBehaviour where T : Component 
 {
-    public bool AutoUnparentOnAwake = true;
+    public bool AutoUnParentOnAwake { get; protected set; } = true;
 
     private static T _instance;
 
@@ -39,10 +39,10 @@ public class PersistentSingleton<T> : MonoBehaviour where T : Component
     {
         if (!Application.isPlaying) return;
 
-        if (AutoUnparentOnAwake) 
+        if (AutoUnParentOnAwake) 
             transform.SetParent(null);
 
-        if (_instance == null) 
+        if (!HasInstance) 
         {
             _instance = this as T;
             DontDestroyOnLoad(gameObject);

@@ -2,7 +2,7 @@
 
 namespace Flyweight
 {
-    public class FlyweightHolder : Singleton<FlyweightHolder>
+    public class FlyweightHolder : PersistentSingleton<FlyweightHolder>
     {
         public static Transform Transform => Instance.transform;
     }
