@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Attributes;
+using UnityEngine;
 
 namespace Flyweight
 {
@@ -6,6 +7,7 @@ namespace Flyweight
         where TFlyweight : Flyweight<TFlyweight, TSettings>
         where TSettings : FlyweightSetting<TFlyweight, TSettings>
     {
+        [field:SerializeField] [field:ShowOnly]
         public TSettings Setting { get; private set; }
 
         public void Initialize(TSettings settings)
