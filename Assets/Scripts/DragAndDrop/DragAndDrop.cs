@@ -55,7 +55,7 @@ namespace DragAndDrop
 
         private IEnumerator DragRoutine(IDraggable draggable)
         {
-            draggable.OnDragStarted();
+            draggable.OnDragStarted(WorldMousePosition);
 
             while (_isDragging)
             {

@@ -12,12 +12,11 @@ namespace DragAndDrop
         private Vector3 AxisPosition => axis.position;
         private Vector3 Position => transform.position;
 
-        private float _deltaAngle;
-        private float _angel;
-
         private Coroutine _coroutine;
-        
-        public void OnDragStarted()
+
+        private float _angel;
+        private float _deltaAngle;
+        public void OnDragStarted(Vector2 worldMousePosition)
         {
             _angel = 0;
             
