@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b80212a6154afc990268c828d1c362, type: 3}
   m_Name: Button3
   m_EditorClassIdentifier: 
-  keyCode: 0
+  keyCode: 97

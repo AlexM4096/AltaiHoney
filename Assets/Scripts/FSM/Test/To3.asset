@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bec945bdcc143b09883b1a5a6dc3f35, type: 3}
   m_Name: To3
   m_EditorClassIdentifier: 
-  decisions: []
-  nextState: {fileID: 0}
+  decisions:
+  - {fileID: 11400000, guid: 7aaead71f13277d40bd8281b3a6b4312, type: 2}
+  nextState: {fileID: 11400000, guid: 0824e29c4defd8c4ca2b9818c6f87481, type: 2}

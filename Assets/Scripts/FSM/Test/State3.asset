@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f544dff51fe4ff284d59c5e669090b1, type: 3}
   m_Name: State3
   m_EditorClassIdentifier: 
-  enterActions: []
+  enterActions:
+  - {fileID: 11400000, guid: 8c94153ec4cb7dd4b9c0c8a77e81a5a4, type: 2}
   exitActions: []
   actions: []
-  transitions: []
+  transitions:
+  - {fileID: 11400000, guid: a428684193f42dc4cb4f59d4e014b84f, type: 2}
