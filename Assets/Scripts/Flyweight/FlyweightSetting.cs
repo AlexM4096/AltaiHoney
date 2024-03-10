@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Pool;
 
 namespace Flyweight
@@ -8,7 +9,7 @@ namespace Flyweight
         where TSettings : FlyweightSetting<TFlyweight, TSettings>
     {
         [SerializeField] private GameObject prefab;
-
+        
         private IObjectPool<TFlyweight> _pool;
 
         private void OnEnable()
@@ -23,7 +24,7 @@ namespace Flyweight
 
         private TFlyweight Create()
         {
-            var go = Instantiate(prefab);
+            var go = Instantiate(prefab, FlyweightHolder.Transform);
             go.name = prefab.name;
 
             var flyweight = go.AddComponent<TFlyweight>();
