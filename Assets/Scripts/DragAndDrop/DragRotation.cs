@@ -9,7 +9,7 @@ namespace DragAndDrop
         private Vector3 AxisPosition => axis.position;
         private Vector3 Position => transform.position;
 
-        public void OnDragStarted()
+        public void OnDragStarted(Vector2 worldMousePosition)
         {
        
         }
