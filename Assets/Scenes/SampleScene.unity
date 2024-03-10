@@ -549,6 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: {fileID: 2014971891}
+  lerp: 0.005
 --- !u!58 &924535268
 CircleCollider2D:
   m_ObjectHideFlags: 0
