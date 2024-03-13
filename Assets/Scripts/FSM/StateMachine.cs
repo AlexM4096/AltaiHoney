@@ -12,6 +12,8 @@ namespace FSM
         
         public void SwitchState(State newState)
         {
+            print(newState.name);
+            
             currentState.Exit(this);
             currentState = newState;
             currentState.Enter(this);
@@ -22,13 +24,18 @@ namespace FSM
             currentState.LogicUpdate(this);
         }
         
+        private void FixedUpdate()
+        {
+            currentState.PhysicsUpdate(this);
+        }
+        
         public new T GetComponent<T>() where T : Component
         {
-            if(_cachedComponents.ContainsKey(typeof(T)))
+            if (_cachedComponents.ContainsKey(typeof(T)))
                 return _cachedComponents[typeof(T)] as T;
             
             var component = base.GetComponent<T>();
-            if(component != null)
+            if (component != null)
                 _cachedComponents.Add(typeof(T), component);
 
             return component;

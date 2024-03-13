@@ -1,10 +1,11 @@
 using Attributes;
 using UnityEditor;
 using UnityEditor.UIElements;
+using UnityEngine;
 using UnityEngine.UIElements;
 
-[CustomPropertyDrawer(typeof(ShowOnlyAttribute))]
-public class ShowOnlyDrawer : PropertyDrawer
+[CustomPropertyDrawer(typeof(HideInPlay))]
+public class HideInPlayDrawer : PropertyDrawer
 {
     public override VisualElement CreatePropertyGUI(SerializedProperty property)
     {
@@ -13,8 +14,9 @@ public class ShowOnlyDrawer : PropertyDrawer
             
         PropertyField propertyField = new(property);
         content.Add(propertyField);
-
-        content.SetEnabled(false);
+    
+        if (Application.isPlaying)
+            content.SetEnabled(false);
 
         return content;
     }

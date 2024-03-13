@@ -39,7 +39,9 @@ namespace DragAndDrop
             Ray ray = _mainCamera.ScreenPointToRay(_mousePosition);
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
-            if (hit.collider != null && hit.collider.TryGetComponent(out IDraggable draggable))
+            if (hit.collider != null && 
+                hit.collider.TryGetComponent(out IDraggable draggable) && 
+                draggable.CanDrag)
             {
                 _isDragging = true;
                 StartCoroutine(DragRoutine(draggable));
@@ -57,13 +59,13 @@ namespace DragAndDrop
         {
             draggable.OnDragStarted(WorldMousePosition);
 
-            while (_isDragging)
+            while (_isDragging && draggable.CanDrag)
             {
                 draggable.OnDrag(WorldMousePosition);
                 yield return null;
             }
             
-            draggable.OnDragFinished();
+            draggable.OnDragFinished(WorldMousePosition);
         }
     }
 }

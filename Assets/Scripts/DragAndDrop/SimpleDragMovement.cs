@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace DragAndDrop
@@ -13,7 +12,7 @@ namespace DragAndDrop
         private Rigidbody2D _rigidbody;
         private float _gravityScale;
 
-        private Vector2 offset;
+        private Vector2 _offset;
 
         private void Awake()
         {
@@ -23,17 +22,19 @@ namespace DragAndDrop
 
         public void OnDragStarted(Vector2 worldMousePosition)
         {
+            transform.rotation = new Quaternion();
+            
             _rigidbody.gravityScale = ZeroGravityScale;
-            offset = (Vector2)transform.position - worldMousePosition;
+            _offset = (Vector2)transform.position - worldMousePosition;
         }
 
         public void OnDrag(Vector2 worldMousePosition)
         {
-            Vector2 delta = worldMousePosition - (Vector2)transform.position + offset; 
+            Vector2 delta = worldMousePosition - (Vector2)transform.position + _offset; 
             _rigidbody.velocity = delta * speed;
         }
 
-        public void OnDragFinished()
+        public void OnDragFinished(Vector2 worldMousePosition)
         {
             _rigidbody.gravityScale = _gravityScale;
         }

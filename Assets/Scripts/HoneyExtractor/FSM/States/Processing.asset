@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f544dff51fe4ff284d59c5e669090b1, type: 3}
+  m_Name: Processing
+  m_EditorClassIdentifier: 
+  enterActions:
+  - {fileID: 11400000, guid: c1e825ce1ffe01a4d9d5e0ed92258c6e, type: 2}
+  - {fileID: 11400000, guid: de8ab28e31976f443b678cb288ae98b9, type: 2}
+  exitActions: []
+  actions: []
+  physicsActions:
+  - {fileID: 11400000, guid: 3f06ca264784a2847b9c8ebe2184eb40, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: a26ee0d96a316634dafff7f6c5ba35a6, type: 2}

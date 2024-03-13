@@ -9,6 +9,7 @@ namespace FSM
         [SerializeField] private List<Action> enterActions = new();
         [SerializeField] private List<Action> exitActions = new();
         [SerializeField] private List<Action> actions = new();
+        [SerializeField] private List<Action> physicsActions = new();
         [SerializeField] private List<Transition> transitions = new();
         
         public void Enter(StateMachine stateMachine)
@@ -35,5 +36,10 @@ namespace FSM
             }
         }
         
+        public void PhysicsUpdate(StateMachine stateMachine)
+        {
+            foreach (var action in physicsActions)
+                action.Execute(stateMachine);
+        }
     }
 }
