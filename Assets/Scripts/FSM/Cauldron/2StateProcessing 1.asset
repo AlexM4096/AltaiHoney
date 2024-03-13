@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f544dff51fe4ff284d59c5e669090b1, type: 3}
-  m_Name: State3
+  m_Name: 2StateProcessing 1
   m_EditorClassIdentifier: 
-  enterActions:
-  - {fileID: 11400000, guid: 8c94153ec4cb7dd4b9c0c8a77e81a5a4, type: 2}
+  enterActions: []
   exitActions: []
   actions: []
   transitions:
-  - {fileID: 11400000, guid: a428684193f42dc4cb4f59d4e014b84f, type: 2}
-  - {fileID: 11400000, guid: ec948c6f4c426a542b45ef468e2c705a, type: 2}
+  - {fileID: 11400000, guid: 0e8d385dd321a01459e660c2d51b6fad, type: 2}
