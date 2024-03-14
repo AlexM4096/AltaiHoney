@@ -7,7 +7,7 @@ using StateMachine = FSM.StateMachine;
 [CreateAssetMenu(menuName = "FSM/Create ObjectPresence")]
 public class CollisionDetector : Decision
 {
-    [SerializeField] private Collider2D collider;
+    [SerializeField]private Collider2D collider;
     [SerializeField]private ContactFilter2D contactFilter;
     public List<Collider2D> hitCollider2Ds = new ();
 

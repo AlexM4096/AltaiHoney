@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 2StateProcessing 1
   m_EditorClassIdentifier: 
   enterActions: []
-  exitActions: []
+  exitActions:
+  - {fileID: 11400000, guid: 65713df81ad72c64d9630fc068056539, type: 2}
   actions: []
   transitions:
   - {fileID: 11400000, guid: 0e8d385dd321a01459e660c2d51b6fad, type: 2}

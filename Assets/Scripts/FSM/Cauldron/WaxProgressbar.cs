@@ -16,7 +16,7 @@ public class WaxProgressbar : Decision
         get => _timer;
         set => _timer = Mathf.Clamp(value, 0, max);
     }
-    public void ResetVariables()
+    public override void ResetVariables()
     {
         _timer = 0;
         _progressSpeed = 1;

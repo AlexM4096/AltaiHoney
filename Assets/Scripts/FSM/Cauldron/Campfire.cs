@@ -12,12 +12,9 @@ public class Campfire : MonoBehaviour
         Fire = GameObject.Find("Fire");
         Fire.SetActive(false);
     }
-
     public void  ToggleFire()
     {
         FireIsActive = !FireIsActive;
         Fire.SetActive(FireIsActive);
     }
-    
-    
 }
