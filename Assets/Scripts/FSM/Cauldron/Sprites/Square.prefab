@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2439770314706832680}
   - component: {fileID: 4011430511208877153}
   - component: {fileID: 4277431334053986633}
+  - component: {fileID: 484928917493005453}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 27}
 --- !u!212 &1024487798982613706
 SpriteRenderer:
@@ -172,3 +173,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54, y: 3.39}
   m_EdgeRadius: 0
+--- !u!114 &484928917493005453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2945818767124303935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5399d9070d5716441b7386038ceb1998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointToRotate: {fileID: 0}
+  Target: {fileID: 0}
