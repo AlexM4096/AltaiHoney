@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f544dff51fe4ff284d59c5e669090b1, type: 3}
-  m_Name: State3
+  m_Name: 2StateFlowers
   m_EditorClassIdentifier: 
-  enterActions:
-  - {fileID: 11400000, guid: 8c94153ec4cb7dd4b9c0c8a77e81a5a4, type: 2}
-  exitActions: []
+  enterActions: []
+  exitActions:
+  - {fileID: 11400000, guid: 65713df81ad72c64d9630fc068056539, type: 2}
   actions: []
   transitions:
-  - {fileID: 11400000, guid: a428684193f42dc4cb4f59d4e014b84f, type: 2}
-  - {fileID: 11400000, guid: ec948c6f4c426a542b45ef468e2c705a, type: 2}
+  - {fileID: 11400000, guid: 0783cb4cb46891446b619c9a3645f755, type: 2}
