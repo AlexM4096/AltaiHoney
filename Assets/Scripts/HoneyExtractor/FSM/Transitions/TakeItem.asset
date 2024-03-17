@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bec945bdcc143b09883b1a5a6dc3f35, type: 3}
   m_Name: TakeItem
   m_EditorClassIdentifier: 
-  decisions: []
+  decisions:
+  - {fileID: 11400000, guid: 13b510893db32354194e32accc4c7b02, type: 2}
+  actions:
+  - {fileID: 0}
   nextState: {fileID: 11400000, guid: 012e33ac20dda3a4ea6d16a64b0df793, type: 2}

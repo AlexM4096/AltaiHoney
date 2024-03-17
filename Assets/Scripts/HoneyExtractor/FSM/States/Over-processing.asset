@@ -17,6 +17,7 @@ MonoBehaviour:
   exitActions: []
   actions: []
   physicsActions:
-  - {fileID: 11400000, guid: 3f06ca264784a2847b9c8ebe2184eb40, type: 2}
+  - {fileID: 11400000, guid: 85f3c14db88239c4ebbb1b8a7f2a5915, type: 2}
   transitions:
+  - {fileID: 11400000, guid: 428e91f8ae32cc249883ed94ab0bc751, type: 2}
   - {fileID: 11400000, guid: 9950dc4c3d401fa409f3e2970a98765e, type: 2}
