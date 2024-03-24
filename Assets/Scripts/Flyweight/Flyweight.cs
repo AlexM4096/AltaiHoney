@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace Flyweight
 {
-    public abstract class Flyweight<TFlyweight, TSettings> : MonoBehaviour
+    public abstract class Flyweight<TFlyweight, TSettings> : 
+        MonoBehaviour
         where TFlyweight : Flyweight<TFlyweight, TSettings>
-        where TSettings : FlyweightSetting<TFlyweight, TSettings>
+        where TSettings : FlyweightSettings<TFlyweight, TSettings>
     {
         [field:SerializeField] [field:HideInPlay]
         public TSettings Setting { get; private set; }
@@ -15,6 +16,9 @@ namespace Flyweight
             Setting = settings;
         }
 
-        public void Destroy() => Setting.Release(this as TFlyweight);
+        public void Destroy() => Setting.Release(this);
+        
+        public static implicit operator TFlyweight(Flyweight<TFlyweight, TSettings> flyweight)
+            => (TFlyweight)flyweight;
     }
 }

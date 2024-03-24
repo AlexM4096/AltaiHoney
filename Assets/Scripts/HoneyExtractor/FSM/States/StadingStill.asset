@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f544dff51fe4ff284d59c5e669090b1, type: 3}
   m_Name: StadingStill
   m_EditorClassIdentifier: 
-  enterActions: []
+  enterActions:
+  - {fileID: 11400000, guid: deacd80b1148fbb42b1c6404e5636af5, type: 2}
   exitActions: []
   actions: []
+  physicsActions: []
   transitions:
   - {fileID: 11400000, guid: b8213adb51f24ee48aa7aabacb82d066, type: 2}
