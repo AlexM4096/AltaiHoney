@@ -1,12 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Pool;
 
 namespace Flyweight
 {
-    public abstract class FlyweightSetting<TFlyweight, TSettings> : ScriptableObject, IObjectPool<TFlyweight>
+    public abstract class FlyweightSettings<TFlyweight, TSettings> : 
+        ScriptableObject, IObjectPool<TFlyweight>
         where TFlyweight : Flyweight<TFlyweight, TSettings>
-        where TSettings : FlyweightSetting<TFlyweight, TSettings>
+        where TSettings : FlyweightSettings<TFlyweight, TSettings>
     {
         [SerializeField] private GameObject prefab;
         
@@ -27,8 +27,10 @@ namespace Flyweight
             var go = Instantiate(prefab, FlyweightHolder.Transform);
             go.name = prefab.name;
 
-            var flyweight = go.AddComponent<TFlyweight>();
-            flyweight.Initialize(this as TSettings);
+            if (!go.TryGetComponent(out TFlyweight flyweight))
+                flyweight = go.AddComponent<TFlyweight>();
+            
+            flyweight.Initialize(this);
 
             return flyweight;
         }
@@ -42,5 +44,8 @@ namespace Flyweight
         public void Release(TFlyweight element) => _pool.Release(element);
         public void Clear() => _pool.Clear();
         public int CountInactive => _pool.CountInactive;
+        
+        public static implicit operator TSettings(FlyweightSettings<TFlyweight, TSettings> settings)
+            => (TSettings)settings;
     }
 }

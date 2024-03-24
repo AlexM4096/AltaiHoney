@@ -1,13 +1,14 @@
 ﻿using FSM;
 using ItemSystem;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace HoneyExtractor
 {
     [CreateAssetMenu(menuName = "FSM/Create SpawnItemAction")]
     public class SpawnItemAction : Action
     {
-        [SerializeField] private ItemSettings itemSettings;
+        [FormerlySerializedAs("itemSettingses")] [SerializeField] private ItemSettings itemSettings;
         
         public override void Execute(StateMachine stateMachine)
         {
