@@ -1,21 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace OrderSystem
 {
-    public class OrderGenerator : MonoBehaviour
+    [Serializable]
+    public class OrderGenerator
     {
         [SerializeField] private OrderSettings settings;
-
-        private void Start()
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                print(GenerateOrder().ToString());
-            }
-        }
 
         public Order GenerateOrder()
         {

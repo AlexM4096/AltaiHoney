@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using ItemSystem;
+using UnityEngine;
 
 namespace OrderSystem
 {
+    [Serializable]
     public class Order
     {
-        private readonly List<Item> _items;
-        public IReadOnlyList<Item> Items => _items;
+        [SerializeField] private List<Item> items;
+        public IReadOnlyList<Item> Items => items;
 
         public Order(IEnumerable<Item> items)
         {
-            _items = new List<Item>(items);
+            this.items = new List<Item>(items);
         }
 
-        public bool IsFinished => _items.All(x => x.IsFinished);
+        public bool IsFinished => items.All(x => x.IsFinished);
 
+        [Serializable]
         public struct Item
         {
             public ItemSettings item;

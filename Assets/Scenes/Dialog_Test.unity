@@ -276,4 +276,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de839dbd0bc44f78253f0ff1cd3a002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogData: {fileID: 11400000, guid: ca745a6534fb02e4b84220846376ab44, type: 2}
+  orderGenerator:
+    settings: {fileID: 11400000, guid: 9c11c0a08351c4c46823c61591e95308, type: 2}

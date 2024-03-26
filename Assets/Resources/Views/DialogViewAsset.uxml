@@ -1,9 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="Window" style="background-color: rgba(0, 0, 0, 0); width: 1000px; height: 600px;">
-        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="Label" style="flex-grow: 4;" />
-        <ui:VisualElement name="ButtonGroup" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; flex-grow: 1;">
-            <ui:Button text="Button" display-tooltip-when-elided="true" name="OkButton" style="flex-grow: 1;" />
-            <ui:Button text="Button" display-tooltip-when-elided="true" name="WhatButton" style="flex-grow: 1;" />
-        </ui:VisualElement>
+    <ui:VisualElement name="Window" style="width: 1000px; height: 600px; font-size: 60px;">
+        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="Label" style="flex-grow: 5;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="OkButton" style="flex-shrink: 1; flex-grow: 1;" />
     </ui:VisualElement>
 </ui:UXML>
